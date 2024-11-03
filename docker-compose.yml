@@ -8,14 +8,14 @@ services:
     restart: unless-stopped
     # volumes used to keep data persistent
     volumes:
-      - config:/App/config
-      - data:/App/data
-      - translations:/App/wwwroot/translations
-      - documents:/App/wwwroot/documents
-      - images:/App/wwwroot/images
-      - temp:/App/wwwroot/temp
-      - log:/App/log
-      - keys:/root/.aspnet/DataProtection-Keys
+      - /media/bulk/portainer/volumes/config:/App/config
+      - /media/bulk/portainer/volumes/data:/App/data
+      - /media/bulk/portainer/volumes/translations:/App/wwwroot/translations
+      - /media/bulk/portainer/volumes/documents:/App/wwwroot/documents
+      - /media/bulk/portainer/volumes/images:/App/wwwroot/images
+      - /media/bulk/portainer/volumes/temp:/App/wwwroot/temp
+      - /media/bulk/portainer/volumes/log:/App/log
+      - /media/bulk/portainer/volumes/keys:/root/.aspnet/DataProtection-Keys
     # expose port and/or use serving via traefik
     ports:
       - 8080:8080
